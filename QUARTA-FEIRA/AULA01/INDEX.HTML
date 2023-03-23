@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Aula 01 - Front End</title>
+        
+    </head>
+    <body>        
+        <h1 id="mensagem">
+            Seja bem vindo ao meu Site, [<span id="nome"></span>]. 
+        </h1>
+    </body>
+    <script>            
+        // Comentário
+        // Exibe uma mensagem de alerta na tela
+        //window.alert('Testando a linguagem JS.');
+
+        // Exibe uma mensagem de confirmação na tela (Cancelar/OK) 
+        var resposta = window.confirm('Você tem certeza que deseja entrar no meu site?');  
+
+        if(resposta){
+        
+            // Exibe uma mensagem solicitando uma entrada de dados
+            var nomeUsuario = window.prompt('Digite seu nome:');
+            //window.console.log(nomeUsuario)
+
+            // Permite acessar um elemento do HTML através da sua identificação
+            // innerText - Permite adicionar um texto
+            window.document.getElementById('nome').innerText = nomeUsuario;
+        }else{
+            window.document.getElementById('mensagem').innerText = 'Usuário anonimo '            
+        }
+            // Exibe uma mensagem na área de console do navegador(Area do desenvolvedor f12)
+            // window.console.log('Estou testando o console')
+            //window.console.log('Estou testando o console...')
+        
+    </script>
+</html>
